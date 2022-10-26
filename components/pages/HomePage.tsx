@@ -28,10 +28,10 @@ export default function HomePage() {
           </div>
           <div className='absolute right-2 top-1 flex flex-col '>
             <a onClick={() => handleClick('autos')}>
-              Auto
+              Cars
             </a>
             <a onClick={() => handleClick('figurines')}>
-              Jewelry
+              Store 
             </a>
           </div>
         </div>
