@@ -2,15 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  overflow-x: hidden;
+  font-size: 24px
+}
 
 @layer base {
   body {
+    background: #111111;
+    background-image: url(/bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     @apply bg-gray-900;
     @apply text-slate-50;
-    background: url(/bg.jpeg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
   }
+}
+
+.language-typescript {
+  background-color: black !important;
+}
+
+.hljs {
+  background-color: transparent !important;
+}
+
+button {
+  @apply py-2;
+  @apply px-3;
+  @apply text-white;
+  @apply bg-black;
+  @apply text-white;
+  @apply text-xs;
+  @apply font-semibold;
+  @apply rounded-md;
+  @apply shadow;
+}
+
+button:hover {
+  @apply outline-none;
+  @apply opacity-75;
+}
+
+.actions {
+  @apply absolute;
+  @apply flex;
+  @apply justify-end;
+  @apply items-end;
+  @apply gap-2;
+  @apply mt-10;
+  @apply z-20;
+}
+
+.example h1 {
+  @apply absolute;
+  @apply text-xl;
+  @apply font-bold;
+  @apply text-center;
+  @apply mt-0;
+  @apply z-10;
 }

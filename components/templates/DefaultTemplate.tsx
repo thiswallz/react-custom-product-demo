@@ -1,4 +1,3 @@
-import { useAtom } from "jotai";
 
 interface DefaultTemplateProps {
   children: React.ReactNode;
@@ -9,8 +8,11 @@ export function DefaultTemplate({
 }: DefaultTemplateProps) {
 
   return (
-    <div className="grid place-items-center h-screen">
-      {children}
+    <div className="flex justify-center">
+      <div className="max-w-6xl">
+        {children}
+      </div>
     </div>
+
   );
 }
