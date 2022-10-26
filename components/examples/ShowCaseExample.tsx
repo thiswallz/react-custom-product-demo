@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useAtom } from 'jotai';
+import { useEffect, useState } from 'react';
 import { ShowCase } from 'react-custom-product'
+import { productAtom } from '../../lib/store';
 import Code from '../ui/code/Code';
 
 
@@ -10,10 +12,29 @@ const Arrow360 = () => <svg className='absolute z-10 top-24 left-24' fill="curre
 
 export default function ShowCaseExample() {
 
+  const [product] = useAtom(productAtom)
+  const [showCaseImages, setShowCaseImages] = useState<string[]>([])
   const [hasBackground, setHasBackground] = useState(true)
 
-  const showCaseImages = Array.from(Array(35).keys()).map(v =>
-    `/3d/${v + 1}.png`) as string[]
+  useEffect(() => {
+    let quantity = 0
+
+    if (product === 'autos') {
+      quantity = 35
+    } else if (product === 'figurines') {
+      quantity = 32
+    }
+    setShowCaseImages(Array.from(Array(quantity).keys()).map(v => {
+      if (product === 'autos') {
+        return `${product}/3d/${v + 1}.png`
+      } else if (product === 'figurines') {
+        return `${product}/3d/${v + 1}.jpg`
+      }
+      return ''
+    }
+    ))
+  }, [product])
+
 
   function handleChange() {
     setHasBackground(!hasBackground)
@@ -40,8 +61,8 @@ export default function SwitchExample() {
   return (
     <div className="flex flex-col h-full example relative">
       <Arrow360 />
-      <div className={` m-4 h-80 scale-150 md:-mt-14 ${hasBackground ? 'mt-24':''} `}>
-        <ShowCase bg={hasBackground ? '/3d/bg.webp' : ''} images={showCaseImages} initialImage={14} width='100%' height='100%' />
+      <div className={` m-4 h-80 scale-150 md:-mt-14 ${hasBackground ? 'mt-24' : ''} `}>
+        <ShowCase bg={hasBackground ? `/${product}/3d/bg.webp` : ''} images={showCaseImages} initialImage={14} width='100%' height='100%' />
       </div>
       <div className='flex justify-center'>
         <Code inner={inner} />
@@ -51,7 +72,7 @@ export default function SwitchExample() {
           id="flexCheckChecked"
           className="h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
           type="checkbox" onChange={handleChange} checked={hasBackground} />
-        <label className="inline-block text-sm text-white" htmlFor="flexCheckChecked">
+        <label className="inline-block text-sm text-pink-600" htmlFor="flexCheckChecked">
           Background
         </label>
       </div>

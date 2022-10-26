@@ -1,4 +1,4 @@
 import { atom } from "jotai";
 
-export const codeAtom = atom('');
+export const productAtom = atom('autos');
 

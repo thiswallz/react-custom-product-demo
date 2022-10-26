@@ -1,12 +1,18 @@
+import { useAtom } from 'jotai';
 import { DefaultTemplate } from '../templates/DefaultTemplate';
 import SwitchExample from '../examples/SwitchExample';
 import CustomColorExample from '../examples/CustomColorExample';
 import ShowCaseExample from '../examples/ShowCaseExample';
+import { productAtom } from '../../lib/store';
 
 export default function HomePage() {
-  function handleClick(option: string){
 
+  const [, setProduct] = useAtom(productAtom)
+  
+  function handleClick(option: string){
+    setProduct(option)
   }
+
   return (
     <DefaultTemplate>
       <div>
@@ -21,10 +27,10 @@ export default function HomePage() {
             <code className='text-[13px] ml-1'>react-custom-product</code>
           </div>
           <div className='absolute right-2 top-1 flex flex-col '>
-            <a onClick={() => handleClick('auto')}>
+            <a onClick={() => handleClick('autos')}>
               Auto
             </a>
-            <a onClick={() => handleClick('jewelry')}>
+            <a onClick={() => handleClick('figurines')}>
               Jewelry
             </a>
           </div>
