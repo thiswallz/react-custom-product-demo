@@ -25,8 +25,8 @@ export default function SwitchExample() {
   // at least 10 images are recommended to have a good exp
   const showCaseImages = [
     '/images/1.png',
-    '/images/1.png',
-    '/images/1.png',
+    '/images/2.png',
+    '/images/3.png',
     '...'
   ]
   
