@@ -1,5 +1,5 @@
-Demo site for [https://github.com/thiswallz/react-custom-product](react-custom-product)
+Demo site for [https://react-custom-product-demo.vercel.app/](react-custom-product)
 
 
-Live at: [](vercel..)
+https://react-custom-product-demo.vercel.app/
 
