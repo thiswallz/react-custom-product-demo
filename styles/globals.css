@@ -29,11 +29,9 @@ html, body {
 
 button {
   @apply py-2;
-  @apply px-3;
+  @apply px-2;
   @apply text-white;
   @apply bg-black;
-  @apply text-white;
-  @apply text-xs;
   @apply font-semibold;
   @apply rounded-md;
   @apply shadow;

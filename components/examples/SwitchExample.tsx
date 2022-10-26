@@ -27,7 +27,7 @@ export default function SwitchExample() {
   return (
     <div className="flex flex-col lg:flex-row h-full example relative">
       <h1 className='left-10'>Switch</h1>
-      <div className='actions left-10'>
+      <div className='actions left-10 text-[14px] md:text-xs'>
         <button onClick={() => setImage('/models/black-1.png')}>
           Model 1
         </button>
@@ -35,11 +35,11 @@ export default function SwitchExample() {
           Model 2
         </button>
       </div>
-      <div className="basis-1/2 flex justify-center">
-        <Switch src={image} css={{ width: '550px', height: '350px' }} />
+      <div className="overflow-hidden flex justify-center">
+        <Switch src={image} width="550px" height="400px" />
       </div>
       <div className="basis-1/2 flex justify-center">
-        <Code inner={inner}  />
+        <Code inner={inner} />
       </div>
     </div>
   );
