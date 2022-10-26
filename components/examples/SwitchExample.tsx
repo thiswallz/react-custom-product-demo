@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Switch } from 'react-custom-product'
+import { ProductSwitch } from 'react-custom-product'
 import Code from '../ui/code/Code';
 
 const inner = `
@@ -36,7 +36,7 @@ export default function SwitchExample() {
         </button>
       </div>
       <div className="overflow-hidden flex justify-center">
-        <Switch src={image} width="550px" height="400px" />
+        <ProductSwitch src={image} width="550px" height="400px" />
       </div>
       <div className="basis-1/2 flex justify-center">
         <Code inner={inner} />

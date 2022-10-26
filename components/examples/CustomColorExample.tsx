@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CustomColor } from 'react-custom-product'
+import { ProductCustomColor } from 'react-custom-product'
 import Code from '../ui/code/Code';
 
 const inner = `
@@ -48,7 +48,7 @@ export default function CustomColorExample() {
         <Code inner={inner} />
       </div>
       <div className="justify-center order-1 lg:order-2 scale-150 mt-20 -ml-36 sm:ml-0">
-        <CustomColor
+        <ProductCustomColor
           width="750px"
           height="450px"
           src={image}
