@@ -58,5 +58,5 @@ button:hover {
   @apply font-bold;
   @apply text-center;
   @apply mt-0;
-  @apply z-10;
+  @apply z-50;
 }

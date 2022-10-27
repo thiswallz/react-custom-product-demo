@@ -41,7 +41,7 @@ export default function ShowCaseExample() {
   }
 
   const inner = `
-export default function SwitchExample() {
+export default function ShowCase() {
 
   // at least 10 images are recommended to have a good exp
   const showCaseImages = [
@@ -64,7 +64,7 @@ export default function SwitchExample() {
       <div className={` m-4 h-80 scale-150 md:-mt-14 ${hasBackground ? 'mt-24' : ''} `}>
         <ShowCase bg={hasBackground ? `/${product}/3d/bg.webp` : ''} images={showCaseImages} initialImage={14} width='100%' height='100%' />
       </div>
-      <div className='flex justify-center'>
+      <div className='flex justify-center mt-10'>
         <Code inner={inner} />
       </div>
       <div className="absolute left-24 top-14">

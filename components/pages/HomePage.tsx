@@ -3,6 +3,7 @@ import { DefaultTemplate } from '../templates/DefaultTemplate';
 import SwitchExample from '../examples/SwitchExample';
 import CustomColorExample from '../examples/CustomColorExample';
 import ShowCaseExample from '../examples/ShowCaseExample';
+import ProductCoverExample from '../examples/ProductCoverExample';
 import { productAtom } from '../../lib/store';
 
 export default function HomePage() {
@@ -35,10 +36,11 @@ export default function HomePage() {
             </a>
           </div>
         </div>
-        <div className='grid grid-cols-1 gap-4 lg:gap-36 lg:m-14'>
+        <div className='grid grid-cols-1 gap-14 lg:gap-36 lg:m-14'>
           <CustomColorExample />
           <ShowCaseExample />
           <SwitchExample />
+          <ProductCoverExample />
         </div>
       </div>
     </DefaultTemplate>
