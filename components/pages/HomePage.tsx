@@ -5,6 +5,7 @@ import CustomColorExample from '../examples/CustomColorExample';
 import ShowCaseExample from '../examples/ShowCaseExample';
 import ProductCoverExample from '../examples/ProductCoverExample';
 import { productAtom } from '../../lib/store';
+import SwitchGalleryExample from '../examples/SwitchGalleryExample';
 
 export default function HomePage() {
 
@@ -31,7 +32,7 @@ export default function HomePage() {
             <a onClick={() => handleClick('autos')}>
               Cars
             </a>
-            <a onClick={() => handleClick('figurines')}>
+            <a onClick={() => handleClick('store')}>
               Store 
             </a>
           </div>
@@ -40,6 +41,7 @@ export default function HomePage() {
           <CustomColorExample />
           <ShowCaseExample />
           <SwitchExample />
+          <SwitchGalleryExample />
           <ProductCoverExample />
         </div>
       </div>

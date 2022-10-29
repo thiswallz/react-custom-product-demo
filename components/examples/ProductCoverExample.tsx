@@ -27,9 +27,9 @@ export default function ProductCoverExample() {
   `;
 
   return (
-    <div className="flex flex-col lg:flex-row h-full example relative">
-      <h1 className='right-10'>ProductCover</h1>
-      <div className='actions flex md:top-48 left-4 md:left-0 md:right-10 text-[14px] md:text-xs'>
+    <div className="flex flex-col lg:flex-row h-full example relative ">
+      <h1 className='left-10'>ProductCover</h1>
+      <div className='actions absolute flex md:top-48 left-4 md:left-10 text-[14px] md:text-xs'>
         <div className='flex'>
           {demoCover}%
           <input
@@ -49,10 +49,8 @@ export default function ProductCoverExample() {
           {demoCoverVertical}%
         </div>
       </div>
-      <div className="basis-1/2 flex justify-center order-2 lg:order-1">
-        <Code inner={inner} />
-      </div>
-      <div className="overflow-hidden flex justify-center order-1 lg:order-2">
+    
+      <div className="md:w-1/2 overflow-hidden flex justify-center ">
         <ProductCover
           src={`/${product}/cover/1.png`}
           cover={`/${product}/cover/2.png`}
@@ -61,6 +59,9 @@ export default function ProductCoverExample() {
           coverWidth={demoCover}
           coverHeight={demoCoverVertical}
         />
+      </div>
+      <div className="md:w-1/2 flex justify-center">
+        <Code inner={inner} />
       </div>
     </div>
   );

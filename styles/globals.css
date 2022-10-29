@@ -52,6 +52,10 @@ button:hover {
   @apply z-20;
 }
 
+.example {
+  @apply justify-center;
+}
+
 .example h1 {
   @apply absolute;
   @apply text-xl;

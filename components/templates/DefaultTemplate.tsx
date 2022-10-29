@@ -9,10 +9,10 @@ export function DefaultTemplate({
   children,
 }: DefaultTemplateProps) {
   const [product] = useAtom(productAtom)
-  // TODO make figurines/autos enums
+  // TODO make store/autos enums
   return (
     <div className={`flex justify-center  
-      ${product === 'figurines' ? 'bg-white text-blue-600' : ''}`}>
+      ${product === 'store' ? 'bg-white text-blue-600' : ''}`}>
       <div className="w-full max-w-6xl">
         {children}
       </div>
