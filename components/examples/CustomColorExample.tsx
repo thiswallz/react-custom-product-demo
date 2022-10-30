@@ -51,7 +51,7 @@ export default function CustomColorExample() {
           Model 3
         </button>
       </div>
-      <div className="md:w-1/2 flex justify-center order-2 lg:order-1">
+      <div className="lg:w-1/2 flex justify-center order-2 lg:order-1">
         <Code inner={inner} />
       </div>
       {
@@ -62,7 +62,7 @@ export default function CustomColorExample() {
             src={image}
           />
         </div> :
-          <div className="md:w-1/2 justify-center order-1 lg:order-2 scale-150 mt-10 -ml-36 sm:ml-0">
+          <div className="lg:w-1/2 justify-center order-1 lg:order-2 scale-150 mt-10 -ml-36 sm:ml-0">
             <ProductCustomColor
               width="750px"
               height="450px"

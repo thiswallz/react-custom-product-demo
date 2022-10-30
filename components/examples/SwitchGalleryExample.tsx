@@ -54,10 +54,10 @@ export default function SwitchGalleryExample() {
       <h1 className='right-10'>SwitchGallery</h1>
       <div className='actions left-10 text-[14px] md:text-xs'>
       </div>
-      <div className="w-1/2 flex justify-center mt-10 order-2 lg:order-1">
+      <div className="lg:w-1/2 flex justify-center mt-10 order-2 lg:order-1">
         <Code inner={inner} />
       </div>
-      <div className="w-full h-80 overflow-hidden flex justify-center order-1 lg:order-2">
+      <div className="lg:w-full h-80 overflow-hidden flex justify-center order-1 lg:order-2">
         <SwitchGallery
           images={showCaseImages}
           cssImage={{

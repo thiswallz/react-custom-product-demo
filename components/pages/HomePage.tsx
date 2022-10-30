@@ -6,6 +6,7 @@ import ShowCaseExample from '../examples/ShowCaseExample';
 import ProductCoverExample from '../examples/ProductCoverExample';
 import { productAtom } from '../../lib/store';
 import SwitchGalleryExample from '../examples/SwitchGalleryExample';
+import HotspotExample from '../examples/HotspotExample';
 
 export default function HomePage() {
 
@@ -42,6 +43,7 @@ export default function HomePage() {
           <ShowCaseExample />
           <SwitchExample />
           <SwitchGalleryExample />
+          <HotspotExample />
           <ProductCoverExample />
         </div>
       </div>
