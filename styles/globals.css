@@ -64,3 +64,18 @@ button:hover {
   @apply mt-0;
   @apply z-50;
 }
+
+.sandbox-btn{
+  @apply py-2;
+  @apply px-2;
+  @apply text-white;
+  @apply bg-pink-600;
+  @apply font-semibold;
+  @apply rounded-md;
+  @apply shadow;
+  font-size: .5em;
+}
+.sandbox-btn:hover {
+  @apply outline-none;
+  @apply opacity-75;
+}

@@ -61,8 +61,14 @@ export default function HotspotExample() {
       <h1 className='top-0 left-10'>Hotspot</h1>
       <div className='actions left-10 text-[14px] md:text-xs'>
       </div>
-      <div className="basis-1/2 mt-10 lg:mt-0 flex justify-center order-2 lg:order-2">
+      <div className="relative basis-1/2 mt-10 lg:mt-0 flex justify-center order-2 lg:order-2">
         <Code inner={inner} />
+        <a 
+        className='sandbox-btn absolute -bottom-5 right-10'
+        href="https://codesandbox.io/s/condescending-wind-gzmptk?file=/src/App.js:176-187" 
+        target="_blank">
+          Open CodeSandbox
+        </a>
       </div>
       <div className="overflow-hidden flex justify-center order-1 lg:order-1">
         <ProductHotspot src={product==='autos' ? `/${product}/hotspot/1.webp`: `/${product}/hotspot/1.avif`} spots={spots} height="auto" />
