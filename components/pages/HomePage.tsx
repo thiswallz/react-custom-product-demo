@@ -7,6 +7,7 @@ import ProductCoverExample from '../examples/ProductCoverExample';
 import { productAtom } from '../../lib/store';
 import SwitchGalleryExample from '../examples/SwitchGalleryExample';
 import HotspotExample from '../examples/HotspotExample';
+import ProductMaskExample from '../examples/ProductMaskExample';
 
 export default function HomePage() {
 
@@ -44,6 +45,7 @@ export default function HomePage() {
           <SwitchExample />
           <SwitchGalleryExample />
           <HotspotExample />
+          <ProductMaskExample />
           <ProductCoverExample />
         </div>
       </div>
